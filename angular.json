@@ -69,6 +69,15 @@
             },
             "ci": {
               "progress": false
+            },
+            "cypress": {
+              "fileReplacements": [
+                {
+                  "replace": "src/main.ts",
+                  "with": "src/main.cypress.ts"
+                }
+              ],
+              "tsConfig": "tsconfig.app.cypress.json"
             }
           },
           "defaultConfiguration": "production"
@@ -84,6 +93,9 @@
             },
             "ci": {
               "progress": false
+            },
+            "cypress": {
+              "buildTarget": "app:build:cypress"
             }
           },
           "defaultConfiguration": "development"
